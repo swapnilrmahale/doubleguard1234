@@ -55,23 +55,11 @@ public class UserLogin extends HttpServlet {
 					request.getParameter("enableSQLGuard"));
 			System.out.println(isEnableSQL);
 
-			
-			// Input for enabling Intrusion detector for XSS Attack
-			Boolean isEnableXSS = new Boolean(
-					request.getParameter("enableXSSGuard"));
-			System.out.println(isEnableXSS);
-
 			// SQL Injection Layer
 			if (isEnableSQL
 					&& IntrusionDetector.isSqlInjection(username, password)) {
 				Reporter.logAttack(request, "SQL Injection");
 				response.sendRedirect("index.jsp?msg=Attempt of SQL Injection");
-			}
-
-			// XSS Attack Detection Layer
-			if (isEnableXSS
-					&& IntrusionDetector.isXSSAttack(username, password)) {
-				response.sendRedirect("index.jsp?msg=Attempt of XSS Attack");
 			}
 
 			if ("admin".equals(username) && "admin".equals(password)) {

@@ -14,7 +14,7 @@ public class IntrusionDetector {
 	public static boolean isXSSAttack(String... inputs) {
 		System.out.println("asdfasdf");
 		
-		return JSAttack.checkAttacks(inputs);
+		return XSSAttack.checkAttacks(inputs);
 	}
 
 }

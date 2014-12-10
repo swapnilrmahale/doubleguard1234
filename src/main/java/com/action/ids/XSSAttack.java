@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  * @author swapper
  *
  */
-public class JSAttack {
+public class XSSAttack {
 
     //private static final Logger LOGGER = Logger.getLogger(JSAttack.class);
 
@@ -35,7 +35,7 @@ public class JSAttack {
             // Pattern for sql injeection
             Pattern.compile("(.*?)[=](.*?)", Pattern.CASE_INSENSITIVE) };
 
-    public JSAttack() {
+    public XSSAttack() {
 
     }
 
