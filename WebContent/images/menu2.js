@@ -1,0 +1,157 @@
+//----------DHTML Menu Created using AllWebMenus PRO ver 4.2-#656---------------
+//\\Leonardo\marketing\Web Sites\AUX files\Likno.com AUX\Likno Site Menu\likno_menu.awm
+var awmMenuName='menu2';
+var awmLibraryBuild=656;
+var awmLibraryPath='/awmdata';
+var awmImagesPath='/awmdata';
+var awmSupported=(navigator.appName + navigator.appVersion.substring(0,1)=="Netscape5" || document.all || document.layers || navigator.userAgent.indexOf('Opera')>-1 || navigator.userAgent.indexOf('Konqueror')>-1)?1:0;
+if (awmAltUrl!='' && !awmSupported) window.location.replace(awmAltUrl);
+if (awmSupported){
+var nua=navigator.userAgent,scriptNo=(nua.indexOf('Safari')>-1)?7:(nua.indexOf('Gecko')>-1)?2:((document.layers)?3:((nua.indexOf('Opera')>-1)?4:((nua.indexOf('Mac')>-1)?5:1)));
+var mpi=document.location,xt="";
+var mpa=mpi.protocol+"//"+mpi.host;
+var mpi=mpi.protocol+"//"+mpi.host+mpi.pathname;
+if(scriptNo==1){oBC=document.all.tags("BASE");if(oBC && oBC.length) if(oBC[0].href) mpi=oBC[0].href;}
+while (mpi.search(/\\/)>-1) mpi=mpi.replace("\\","/");
+mpi=mpi.substring(0,mpi.lastIndexOf("/")+1);
+var e=document.getElementsByTagName("SCRIPT");
+for (var i=0;i<e.length;i++){if (e[i].src){if (e[i].src.indexOf(awmMenuName+".js")!=-1){xt=e[i].src.split("/");if (xt[xt.length-1]==awmMenuName+".js"){xt=e[i].src.substring(0,e[i].src.length-awmMenuName.length-3);if (e[i].src.indexOf("://")!=-1){mpi=xt;}else{if(xt.substring(0,1)=="/")mpi=mpa+xt; else mpi+=xt;}}}}}
+while (mpi.search(/\/\.\//)>-1) {mpi=mpi.replace("/./","/");}
+var awmMenuPath=mpi.substring(0,mpi.length-1);
+while (awmMenuPath.search("'")>-1) {awmMenuPath=awmMenuPath.replace("'","&#39;");}
+document.write("<SCRIPT SRC='"+awmMenuPath+awmLibraryPath+"/awmlib"+scriptNo+".js'><\/SCRIPT>");
+var n=null;
+awmzindex=1000;
+}
+
+var awmSubmenusFrame='';
+var awmSubmenusFrameOffset;
+var awmOptimize=1;
+var awmUseTrs=0;
+var awmSepr=["0","","",""];
+//Advanced Scripting
+document.write("<script type='text/javascript' src='"+awmMenuPath+"/promos.js'><\/script>");
+//End of Advanced Scripting
+function awmBuildMenu(){
+if (awmSupported){
+awmImagesColl=["main-button-tile.gif",46,18,"main-buttonOver-tile.gif",43,18,"main-button-left.gif",10,18,"main-buttonOver-left.gif",9,18,"main-button-right.gif",10,18,"main-buttonOver-right.gif",8,18,"menu5.gif",10,5,"menu14lineno.jpg",250,40,"menu13lineno.jpg",250,40,"menu14.jpg",250,41,"menu13.jpg",250,41,"small_screenshot.gif",174,164,"menu12lineno.jpg",270,40,"fs_screenshot_small.jpg",144,158,"menu3.gif",19,11,"menu4.gif",19,11,"menu10lineno.jpg",270,40,"menu12.jpg",270,41,"menu10.jpg",270,41,"browsers.gif",179,21,"tools.gif",266,26];
+awmCreateCSS(0,1,0,n,'#873A3A',n,n,n,'none',0,'#000000',0,0);
+awmCreateCSS(1,2,1,'#A1D4F7','#346DA5',0,'bold 11px Tahoma',n,'none',0,'#000000','0px 0px 0px 0',1);
+awmCreateCSS(0,2,1,'#FFCCAB','#346DA5',1,'bold 11px Tahoma',n,'none',0,'#000000','0px 0px 0px 0',1);
+awmCreateCSS(1,2,1,'#A1D4F7','#346DA5',0,'bold 11px Tahoma',n,'none',0,'#000000','0px 0px 0px 0',0);
+awmCreateCSS(0,2,1,'#FFCCAB','#346DA5',1,'bold 11px Tahoma',n,'none',0,'#000000','0px 0px 0px 0',0);
+awmCreateCSS(0,2,1,'#FFCCAB','#346DA5',0,'bold 11px Tahoma',n,'none',0,'#000000','0px 0px 0px 0',0);
+awmCreateCSS(0,1,0,n,'#000000',n,n,n,'solid',1,'#000000',0,0);
+awmCreateCSS(1,2,1,'#FFFFFF','#09629A',n,'11px sans-serif',n,'none',0,'#000000','2px 3px 2px 3',1);
+awmCreateCSS(0,2,1,'#FFFFFF','#0B5482',n,'11px sans-serif',n,'none',0,'#000000','2px 3px 2px 3',1);
+awmCreateCSS(1,2,0,'#000000','#D4EEFB',7,'11px sans-serif',n,'none',0,'#000000','2px 0px 2px 0',1);
+awmCreateCSS(0,2,0,'#000000','#D4EEFB',8,'11px sans-serif',n,'none',0,'#000000','2px 0px 2px 0',1);
+awmCreateCSS(1,2,0,'#000000','#D4EEFB',9,'11px sans-serif',n,'none',0,'#000000','2px 0px 2px 0',1);
+awmCreateCSS(0,2,0,'#000000','#D4EEFB',10,'11px sans-serif',n,'none',0,'#000000','2px 0px 2px 0',1);
+awmCreateCSS(1,2,0,'#000000','#D4EEFB',9,'11px sans-serif',n,'none',0,'#000000','2px 8px 2px 19',1);
+awmCreateCSS(0,2,0,'#000000','#D4EEFB',10,'11px sans-serif',n,'none',0,'#000000','2px 8px 2px 19',1);
+awmCreateCSS(0,1,0,n,'#000000',n,n,n,'outset',2,'#C0C0C0',0,0);
+awmCreateCSS(1,2,0,'#000000','#D4EEFB',n,'10px sans-serif',n,'none',0,'#000000','0px 0px 0px 0',1);
+awmCreateCSS(0,2,1,'#FFFFFF','#004979',n,'11px sans-serif',n,'none',0,'#000000','0px 0px 0px 0',1);
+awmCreateCSS(1,2,0,'#000000','#D4EEFB',7,'11px sans-serif',n,'none',0,'#000000','2px 10px 2px 10',1);
+awmCreateCSS(0,2,0,'#000000','#D4EEFB',8,'11px sans-serif',n,'none',0,'#000000','2px 10px 2px 10',1);
+awmCreateCSS(1,2,0,'#FFFFFF','#09629A',12,'11px sans-serif',n,'none',0,'#000000','2px 5px 2px 5',0);
+awmCreateCSS(0,2,0,'#FFFFFF','#09629A',12,'11px sans-serif',n,'none',0,'#000000','2px 5px 2px 5',0);
+awmCreateCSS(0,1,0,n,'#C0C0C0',n,n,n,'solid',1,'#C0C0C0',0,0);
+awmCreateCSS(1,2,0,'#000000','#D4EEFB',7,'11px sans-serif',n,'solid',1,'#8D9EA8','2px 0px 2px 0',1);
+awmCreateCSS(0,2,0,'#000000','#D4EEFB',8,'11px sans-serif',n,'solid',1,'#8D9EA8','2px 0px 2px 0',1);
+awmCreateCSS(0,2,1,'#FFFFFF','#004979',n,'10px sans-serif',n,'none',0,'#000000','0px 4px 0px 4',1);
+awmCreateCSS(1,2,0,'#FFFFFF','#09629A',12,'11px sans-serif',n,'none',0,'#000000','2px 5px 2px 5',1);
+awmCreateCSS(0,2,0,'#FFFFFF','#09629A',12,'11px sans-serif',n,'none',0,'#000000','2px 5px 2px 5',1);
+awmCreateCSS(1,2,0,'#FFFFFF','#09629A',12,'11px sans-serif',n,'none',0,'#000000','2px 0px 2px 0',1);
+awmCreateCSS(0,2,0,'#000000','#D4EEFB',16,'11px sans-serif',n,'none',0,'#000000','2px 0px 2px 0',1);
+awmCreateCSS(1,2,0,'#FFFFFF','#09629A',17,'11px sans-serif',n,'none',0,'#000000','2px 0px 2px 0',1);
+awmCreateCSS(0,2,0,'#000000','#D4EEFB',18,'11px sans-serif',n,'none',0,'#000000','2px 0px 2px 0',1);
+awmCreateCSS(1,2,1,'#000000','#E7EEF4',9,'11px sans-serif',n,'none',0,'#000000','5px 0px 0px 0',0);
+awmCreateCSS(0,2,1,'#000000','#E7EEF4',9,'11px sans-serif',n,'none',0,'#000000','5px 0px 0px 0',0);
+awmCreateCSS(1,2,1,'#000000','#E7EEF4',n,'11px sans-serif',n,'none',0,'#000000','5px 0px 0px 0',0);
+awmCreateCSS(0,2,1,'#000000','#E7EEF4',n,'11px sans-serif',n,'none',0,'#000000','5px 0px 0px 0',0);
+awmCreateCSS(1,2,0,'#000000','#D4EEFB',7,'11px sans-serif',n,'none',0,'#000000','5px 20px 5px 20',1);
+awmCreateCSS(0,2,0,'#000000','#D4EEFB',8,'11px sans-serif',n,'none',0,'#000000','5px 20px 5px 20',1);
+var s0=awmCreateMenu(0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,1,n,n,94,1,0,0,0,0);
+it=s0.addItemWithImages(1,2,n,"  Home  ",n,"","",n,n,n,3,3,3,n,n,n,"index.html",n,n,n,"index.html",n,100,0,2,2,3,3,4,5,5,0,0,0,0);
+var s1=it.addSubmenu(1,0,1,0,0,0,0,6,0,0,1,n,n,100,2,16,0);
+it=s1.addItem(7,8,n,"-- Likno Site Menu by AllWebMenus --<br>Our site menu shows only some of the<br>customization options of AllWebMenus.<br>Check out all available features >>",n,"","","",n,n,n,"allwebmenusinfo.html",n,0,0,2,0);
+it=s0.addItemWithImages(3,4,n,"  Products  ",n,"","",n,n,n,3,3,3,n,n,n,"Likno Software Products",n,n,n,n,n,100,0,2,2,3,3,4,5,5,0,0,0,0);
+var s1=it.addSubmenu(0,0,1,0,0,0,0,6,0,1,0,n,n,100,2,1,0);
+it=s1.addItemWithImages(9,10,n,"   AllWebMenus   ",n,"","",6,6,6,3,3,3,n,n,n,"AllWebMenus",n,n,n,"allwebmenusinfo.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+var s2=it.addSubmenu(0,0,-5,0,0,0,0,6,0,1,0,n,n,100,2,2,0);
+it=s2.addItemWithImages(9,10,n,"   Description & Features   ","   Click to view features   ","","",6,6,6,3,3,3,n,n,n,"Description & Features",n,n,n,"allwebmenusinfo.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   Supported Tools   ",n,"","",6,6,6,3,3,3,n,n,n,"Supported Browsers & Tools",n,n,n,"web_authoring_tools.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   Examples   ",n,"","",6,6,6,3,3,3,n,n,n,"Examples of menus created by AllWebMenus",n,n,n,"examples.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   Templates   ",n,"","",6,6,6,3,3,3,n,n,n,"Templates",n,n,n,"menu-templates/gallery.php",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   Themes   ",n,"","",6,6,6,3,3,3,n,n,n,"Themes",n,n,n,"awmstyles.php",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   Screenshots   ","   Click to view screenshots   ","","",6,6,6,3,3,3,n,n,n,"Screenshots",n,n,n,"screenshots.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+var s3=it.addSubmenu(0,0,-5,0,0,0,0,15,1,1,0,n,n,100,2,5,0);
+it=s3.addItemWithImages(16,17,n,"","Click here to visit the<br>page with all screenshots","","",11,n,11,3,3,3,n,n,n,"screenshots.html",n,n,n,"screenshots.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   Awards & Testimonials   ","   View user comments!   ","","",6,6,6,3,3,3,n,n,n,"Testimonials",n,n,n,"testimonials.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   What's New!   ","   Always supporting you!   ","","",6,6,6,3,3,3,n,n,n,"What's New!",n,n,n,"whatsnew.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   Server-Side Menus API Add-in   ",n,"","",6,6,6,3,3,3,n,n,n,"",n,n,n,"addins/dhtml-menu-serverside.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Likno Menu Templates   ",n,"","",6,6,6,3,3,3,n,n,n,"Likno Menu Templates",n,n,n,"menu-templates/gallery.php",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+var s2=it.addSubmenu(1,0,-5,0,0,0,0,6,0,0,1,n,n,100,2,14,0);
+it=s2.addItem(18,19,n,"View/Purchase available menu designs!<br>(source PSD files also included!)",n,"","","View/Purchase Menu Templates",n,n,n,"menu-templates/gallery.php",n,0,0,2,0);
+var s3=it.addSubmenu(1,0,10,0,0,1,0,6,0,0,1,n,n,100,8,15,0);
+it=s3.addItem(20,21,n,"Note: These Menu Templates are complete menu<br>projects with all graphics and PSD files included!",n,"","","",n,n,n,n,n,0,0,2,0);
+it=s1.addItemWithImages(11,12,n,"   Likno Web Button Maker   ",n,"","",6,6,6,3,3,3,n,n,n,"Likno Web Button Maker",n,n,n,"web-button-maker/index.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+var s2=it.addSubmenu(0,0,-5,0,0,0,0,6,0,1,0,n,n,100,2,6,0);
+it=s2.addItemWithImages(9,10,n,"   Product Overview   ",n,"","",6,6,6,3,3,3,n,n,n,"Product Overview",n,n,n,"web-button-maker/index.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   Features   ","   click to view major features   ","","",6,6,6,3,3,3,n,n,n,"Features",n,n,n,"web-button-maker/features.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   Button examples   ","   click here to view some examples   ","","",6,6,6,3,3,3,n,n,n,"Button examples",n,n,n,"web-button-maker/examples.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   Screenshots   ","   click to view screenshots   ","","",6,6,6,3,3,3,n,n,n,"Screenshots",n,n,n,"web-button-maker/screenshots.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   Button Packs   ","   click to view Button Packs   ","","",6,6,6,3,3,3,n,n,n,"Button Packs",n,n,n,"web-button-maker/lwbmshapes.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Likno Drop-Down Menu Trees   ",n,"","",6,6,6,3,3,3,n,n,n,"Likno Web Button Maker",n,n,n,"drop-down-menu-trees/index.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+var s2=it.addSubmenu(0,0,-5,0,0,0,0,6,0,1,0,n,n,100,2,13,0);
+it=s2.addItemWithImages(9,10,n,"   Product Overview   ",n,"","",6,6,6,3,3,3,n,n,n,"Product Overview",n,n,n,"drop-down-menu-trees/index.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   Features   ","   click to view major features   ","","",6,6,6,3,3,3,n,n,n,"Features",n,n,n,"drop-down-menu-trees/features.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   Examples   ","   click here to view all examples   ","","",6,6,6,3,3,3,n,n,n,"Menu Trees examples",n,n,n,"drop-down-menu-trees/examples.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(11,12,n,"   Gallery of Tree Themes collection   ","   click to view all available designs   ","","",6,6,6,3,3,3,n,n,n,"Tree Themes",n,n,n,"drop-down-menu-trees/gallery.php",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Photo Frame Show   ",n,"","",6,6,6,3,3,3,n,n,n,"FrameShow",n,n,n,"frameshow.html","new",0,0,2,n,n,n,n,n,n,0,0,0,0);
+var s2=it.addSubmenu(0,0,-5,0,0,0,0,22,0,1,0,n,n,100,2,7,0);
+it=s2.addItemWithImages(23,24,n,"   Product Overview   ",n,"","",6,6,6,3,3,3,n,n,n,"Product Overview",n,n,n,"frameshow.html","new",0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s2.addItemWithImages(16,25,n,"","Click here to visit the main <br>page of Photo Frame Show<br>http://www.frameshow.com","","",13,n,n,3,3,3,n,n,n,"http://www.frameshow.com",n,n,n,"http://www.frameshow.com","new",0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItem(13,14,n,"Custom Project Services:<br>Development, Design, Web Marketing",n,"","","Status Bar Magic",n,n,n,"custom-projects.html",n,0,0,2,0);
+var s2=it.addSubmenu(1,0,4,0,0,0,0,6,0,0,1,n,n,100,4,3,0);
+it=s2.addItem(26,27,n,"Click here for more information<br>on custom project services.",n,"","","",n,n,n,"custom-projects.html",n,0,0,2,0);
+it=s0.addItemWithImages(3,4,n,"  Download  ",n,"","",n,n,n,3,3,3,n,n,n,"Download Area",n,n,n,n,n,100,0,2,2,3,3,4,5,5,0,0,0,0);
+var s1=it.addSubmenu(0,0,1,0,0,0,0,6,0,1,0,n,n,100,2,9,0);
+it=s1.addItemWithImages(28,29,n,"   Download <b><font color=#FFFFFF>AllWebMenus PRO</font></b>   ","   Download <b><font color=#B55823>AllWebMenus PRO</font></b>    ","","",14,15,n,3,3,3,n,n,n,"Download AllWebMenus PRO",n,n,n,"download.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(30,31,n,"   Download <b><font color=#FFFFFF>Server-Side Menus API Add-in</font></b>   ","   Download <b><font color=#B55823>Server-Side Menus API Add-in</font></b>   ","","",14,15,n,3,3,3,n,n,n,"",n,n,n,"addins/dhtml-menu-serverside.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(30,31,n,"   Download <b><font color=#FFFFFF>AllWebMenus LITE</font></b>   ","   Download <b><font color=#B55823>AllWebMenus LITE</font></b>   ","","",14,15,n,3,3,3,n,n,n,"Download AllWebMenus LITE",n,n,n,"download_awmlite.html ",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(30,31,n,"   Download <b><font color=#FFFFFF>AllWebMenus Themes</font></b>   ","   Download <b><font color=#B55823>AllWebMenus Themes</font></b>   ","","",14,15,n,3,3,3,n,n,n,"Download AllWebMenus Themes",n,n,n,"awmthemes.php",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(30,31,n,"   Download <b><font color=#FFFFFF>Likno Web Button Maker</font></b>   ","   Download <b><font color=#B55823>Likno Web Button Maker</font></b>   ","","",14,15,n,3,3,3,n,n,n,"Download Likno Web Button Maker",n,n,n,"web-button-maker/download.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(30,31,n,"   Download <b><font color=#FFFFFF>Likno Drop-Down Menu Trees</font></b>   ","   Download <b><font color=#B55823>Likno Drop-Down Menu Trees</font></b>   ","","",14,15,n,3,3,3,n,n,n,"Download Likno Drop-Down Menu Trees",n,n,n,"drop-down-menu-trees/download.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(30,31,n,"   Download <b><font color=#FFFFFF>Photo Frame Show</font></b>   ","   Download <b><font color=#B55823>Photo Frame Show</font></b>   ","","",14,15,n,3,3,3,n,n,n,"Download FrameShow",n,n,n,"http://www.frameshow.com/download.htm","new",0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s0.addItemWithImages(3,4,n,"  Purchase  ",n,"","",n,n,n,3,3,3,n,n,n,"Registration Page",n,n,n,n,n,100,0,2,2,3,3,4,5,5,0,0,0,0);
+var s1=it.addSubmenu(0,0,1,0,0,0,0,6,0,1,0,n,n,100,2,10,0);
+it=s1.addItemWithImages(9,10,n,"   Special Offers!   ","   <b>Special Offers!</b>   ","","",6,6,6,3,3,3,n,n,n,"Purchase AllWebMenus PRO",n,n,n,"offers.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Purchase AllWebMenus PRO   ","   <b>Purchase</b> AllWebMenus <b>PRO</b>   ","","",6,6,6,3,3,3,n,n,n,"Purchase AllWebMenus PRO",n,n,n,"awmregister.php",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Purchase AllWebMenus LITE   ","   <b>Purchase</b> AllWebMenus <b>LITE</b>   ","","",6,6,6,3,3,3,n,n,n,"Purchase AllWebMenus LITE",n,n,n,"awmliteregister.php",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Purchase AllWebMenus Server-Side Menus API Add-in   ","   <b>Purchase</b> AllWebMenus <b>Server-Side Menus API Add-in</b>   ","","",6,6,6,3,3,3,n,n,n,"Purchase AllWebMenus LITE",n,n,n,"addins/awmssmregister.php",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Upgrade AllWebMenus...   ","   <b>from</b> LITE or v3 <b>to</b> PRO or v4   ","","",6,6,6,3,3,3,n,n,n,"Upgrade AllWebMenus",n,n,n,"awmregister_upg.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Purchase Likno Menu Templates   ","   <b>Purchase</b> Likno<b> Menu Templates</b>   ","","",6,6,6,3,3,3,n,n,n,"Purchase Likno Menu Templates",n,n,n,"menu-templates/gallery.php",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Purchase AllWebMenus Themes   ","   <b>Purchase</b> AllWebMenus <b>Themes</b>   ","","",6,6,6,3,3,3,n,n,n,"Upgrade AllWebMenus",n,n,n,"awmthemes_download.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Purchase Likno Web Button Maker   ","   Purchase<b> Likno Web Button Maker</b>   ","","",6,6,6,3,3,3,n,n,n,"Purchase Likno Web Button Maker",n,n,n,"web-button-maker/register.php",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Purchase LWBM Button Packs   ","   <b>Purchase</b> LWBM <b>Button Packs</b>   ","","",6,6,6,3,3,3,n,n,n,"Purchase LWBM Button Packs via your Likno User Area",n,n,n,"http://www.likno.com/userarea/login.php","new",0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Purchase Likno Drop-Down Menu Trees   ","   <b>Purchase</b> Likno <b>Drop-Down Menu Trees</b>   ","","",6,6,6,3,3,3,n,n,n,"Purchase Likno Drop-Down Menu Trees",n,n,n,"drop-down-menu-trees/register.php",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Purchase Likno Drop-Down Menu Trees Themes   ","   <b>Purchase</b> Likno Drop-Down Menu Trees <b>Themes</b>   ","","",6,6,6,3,3,3,n,n,n,"Purchase Likno Drop-Down Menu Trees Themes",n,n,n,"drop-down-menu-trees/gallery.php",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Purchase Photo Frame Show   ","   Purchase <b>Photo Frame Show</b>   ","","",6,6,6,3,3,3,n,n,n,"Purchase FrameShow",n,n,n,"http://www.frameshow.com/register.htm","new",0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   Join our Affiliate/Reseller Program   ","   Profit from our products!   ","","",6,6,6,3,3,3,n,n,n,"Profit from our products!",n,n,n,"affiliate.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s0.addItemWithImages(3,4,n,"  Support  ",n,"","",n,n,n,3,3,3,n,n,n,"",n,n,n,n,n,100,0,2,2,3,3,4,5,5,0,0,0,0);
+var s1=it.addSubmenu(0,0,1,0,0,0,0,6,0,1,0,n,n,100,2,11,0);
+it=s1.addItemWithImages(9,10,n,"   Login to Likno User Area   ",n,"","",6,6,6,3,3,3,n,n,n,"Login to Likno User Area",n,n,n,"/userarea/login.php","new",0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   On-Line Support Center   ",n,"","",6,6,6,3,3,3,n,n,n,"On-Line Support Center",n,n,n,"support_page.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   E-mail Sales   ",n,"","",6,6,6,3,3,3,n,n,n,"E-mail Sales",n,n,n,"mailto:sales@likno.com",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(11,12,n,"   About Likno Software   ",n,"","",6,6,6,3,3,3,n,n,n,"About Likno Software",n,n,n,"aboutus.html",n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(32,33,n,"  Create fully cross-browser menus!  ",n,"","This is a non-clickable item that shows information",19,19,19,2,2,2,n,n,n,"",n,n,n,n,n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s1.addItemWithImages(34,35,n,"  Work with your favourite authoring tools without hassle!  ",n,"","This is a non-clickable item that shows information",20,20,20,2,2,2,n,n,n,"",n,n,n,n,n,0,0,2,n,n,n,n,n,n,0,0,0,0);
+it=s0.addItemWithImages(3,4,n,"  User Area  ",n,"","",n,n,n,3,3,3,n,n,n,"",n,n,n,n,n,100,0,2,2,3,3,4,5,5,0,0,0,0);
+var s1=it.addSubmenu(0,0,1,0,0,0,0,6,1,1,0,n,n,100,2,12,0);
+it=s1.addItem(36,37,n,"Click here to login<br>to your User Area",n,"","","See menu-driven customer pages!",n,n,n,"userarea/login.php",n,0,0,2,0);
+it=s0.addItemWithImages(3,5,n,"    ",n,"","",n,n,n,3,3,3,n,n,n,"",n,n,n,n,n,13,0,2,2,2,2,n,n,n,0,0,0,0);
+s0.pm.buildMenu();
+}}
