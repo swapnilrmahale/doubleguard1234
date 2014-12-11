@@ -58,6 +58,7 @@ public class NewProfile extends HttpServlet {
 					request.getParameter("enableXSSGuard"));
 			System.out.println(isEnableXSS);
 
+			// Check If there any Attempt of XSS Attack
 			if (isEnableXSS
 					&& IntrusionDetector.isXSSAttack(name, password, emailid,
 							sex)) {
