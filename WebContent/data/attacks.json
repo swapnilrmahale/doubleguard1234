@@ -1,0 +1,14 @@
+[
+    {
+        "attack": "SQL Injection",
+        "number": 10
+    },
+    {
+        "attack": "XSS Attack",
+        "number": 25
+    },
+    {
+        "attack": "Session Hijacking",
+        "number": 50
+    }
+]
