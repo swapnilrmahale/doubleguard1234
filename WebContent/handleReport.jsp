@@ -17,13 +17,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>DoubleGuard : Audit & Reports</title>
+        <title>DoubleGuard : Audit and Reports</title>
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <link href="default1.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="css/reveal.css" rel="stylesheet" type="text/css" media="screen" />
-        <script type="text/javascript" src="js/jquery.reveal.js"></script>
+        <link href="css/jquery.jqplot.css" rel="stylesheet" type="text/css" media="screen" />
+        
         <script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+        <script type="text/javascript" src="js/jquery.reveal.js"></script>
+        <!--<script language="javascript" type="text/javascript" src="jquery.min.js"></script>-->
+		
+		<script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
+		<script type="text/javascript" src="js/jquery.jqplot.pierenderer.js"></script>
+		<script type="text/javascript" src="js/piechart.js"></script>
+		<script type="text/javascript" src="js/jquery.jqplot.barrenderer.js"></script>
+		<script type="text/javascript" src="js/jquery.jqplot.categoryAxisRenderer.js"></script>
+        
         <%
             System.out.println("Session ID=" + session.getId());
         %>
@@ -32,12 +42,14 @@
                 $("#flip").click(function(){
                     $("#panel").slideToggle("slow");
                 });
+                loadPieOS();
+                
+                loadPieAttack();
+                
+                loadBar();
             });
-            
-            function handleReport() {
-            	alert("Handle Rerport");
-            }
         </script>
+        
         <style type="text/css"> 
             #panel,#flip
             {
@@ -83,6 +95,16 @@
             <!-- end menu -->
             <!-- start page -->
             <div id="page">
+            	<div id="pieOS" style="height:400px;width:600px; "></div>
+            	
+            	<br/><br/>
+            	
+            	<div id="pieAttack" style="height:400px;width:600px; "></div>
+            	
+            	<br/><br/>
+            	
+            	<div id="bar" style="height:400px;width:600px; "></div>
+            	
                 <!-- start ads -->
 
                 <!-- end ads -->
