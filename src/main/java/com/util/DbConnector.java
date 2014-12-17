@@ -27,9 +27,9 @@ public class DbConnector {
         try {
             Class.forName(driver).newInstance();
             conn = DriverManager.getConnection(url + dbName, userName, password);
-            System.out.println("Connected to the database");
-            //conn.close();
-            //System.out.println("Disconnected from database");
+            // System.out.println("Connected to the database");
+            // conn.close();
+            // System.out.println("Disconnected from database");
         } catch (Exception e) {
             e.printStackTrace();
         }

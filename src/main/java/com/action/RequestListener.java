@@ -36,7 +36,7 @@ public class RequestListener implements Filter {
         
         String userAgentInfo = _r.getHeader("User-Agent");
         Boolean isValidUserAgent = UserAgents.getBrowserInfo(userAgentInfo);
-        System.out.println("Valid User Agent : "+isValidUserAgent + "\n");
+//        System.out.println("Valid User Agent : "+isValidUserAgent + "\n");
       
         if(!isValidUserAgent){
               PrintWriter out = response.getWriter();

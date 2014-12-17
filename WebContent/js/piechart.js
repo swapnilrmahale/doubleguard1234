@@ -1,14 +1,16 @@
 function loadPieOS() {
-	var jsonurl = 'data/os.json';
+	var jsonurl = 'FetchReportData?rtype=pieos';
 	var ret;
 	$.ajax({
 		async : false,
 		url : jsonurl,
 		dataType : "json",
 		success : function(data) {
+			console.log(data);
 			ret = data;
 		}
 	});
+	ret = ret.data;
 	var dataSlices = [];
 
 	$.each(ret, function(entryindex, entry) {
@@ -25,6 +27,8 @@ function loadPieOS() {
 				// Turn off filling of slices.
 				fill : false,
 				showDataLabels : true,
+				dataLabels: 'percent',
+				// dataLabelFormatString : "%d %d%%",
 				// Add a margin to seperate the slices.
 				sliceMargin : 4,
 				// stroke the slices with a little thicker line.
@@ -39,7 +43,7 @@ function loadPieOS() {
 }
 
 function loadPieAttack() {
-	var jsonurl = 'data/attacks.json';
+	var jsonurl = 'FetchReportData?rtype=pieattack';
 	var ret;
 	$.ajax({
 		async : false,
@@ -49,6 +53,7 @@ function loadPieAttack() {
 			ret = data;
 		}
 	});
+	ret = ret.data;
 	var dataSlices = [];
 
 	$.each(ret, function(entryindex, entry) {
@@ -65,6 +70,7 @@ function loadPieAttack() {
 				// Turn off filling of slices.
 				fill : false,
 				showDataLabels : true,
+				dataLabels: 'percent',
 				// Add a margin to seperate the slices.
 				sliceMargin : 4,
 				// stroke the slices with a little thicker line.
@@ -79,27 +85,6 @@ function loadPieAttack() {
 }
 
 function loadBar() {
-	/*
-	var jsonurl = 'data/attacks.json';
-	var ret;
-	$.ajax({
-		async : false,
-		url : jsonurl,
-		dataType : "json",
-		success : function(data) {
-			ret = data;
-		}
-	});
-	var dataSlices = [];
-
-	$.each(ret, function(entryindex, entry) {
-		var dataSlice = [];
-		dataSlice.push(entry['attack']);
-		dataSlice.push(entry['number']);
-		dataSlices.push(dataSlice);
-	});
-	*/
-	console.log('loadBar');
 	 var plot4 = $.jqplot('bar', [[[2,'127.0.0.1'], [6,'192.168.101.1'], [7,'192.168.101.5'], [10,'localhost']], [[7,'127.0.0.1'], [5,'192.168.101.1'],[3,'192.168.101.5'],[2,'localhost']], [[14,'127.0.0.1'], [9,'192.168.101.1'], [9,'192.168.101.5'], [8,'localhost']]], {
          stackSeries: true,
          captureRightClick: true,

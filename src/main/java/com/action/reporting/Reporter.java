@@ -29,19 +29,19 @@ public class Reporter {
 		String browserDetails = request.getHeader("User-Agent");
 		String userAgent = browserDetails;
 		String user = userAgent.toLowerCase();
-
+		System.out.println(user);
 		String os = "";
 		// =================OS=======================
 		if (userAgent.toLowerCase().indexOf("windows") >= 0) {
 			os = "Windows";
+		} else if (userAgent.toLowerCase().indexOf("iphone") >= 0) {
+			os = "IPhone";
 		} else if (userAgent.toLowerCase().indexOf("mac") >= 0) {
 			os = "Mac";
 		} else if (userAgent.toLowerCase().indexOf("x11") >= 0) {
 			os = "Unix";
 		} else if (userAgent.toLowerCase().indexOf("android") >= 0) {
 			os = "Android";
-		} else if (userAgent.toLowerCase().indexOf("iphone") >= 0) {
-			os = "IPhone";
 		} else {
 			os = "UnKnown, More-Info: " + userAgent;
 		}

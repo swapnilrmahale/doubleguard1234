@@ -26,6 +26,7 @@ public class LoginProcessor {
         try {
             conn = (Connection) DbConnector.getConnection();
             sql = "select * from user where user= '" + userid + "' and password= '" + password+"'";
+            System.out.println(sql);
             pst = (PreparedStatement) conn.prepareStatement(sql);
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {

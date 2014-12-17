@@ -73,6 +73,7 @@ public class NewProfile extends HttpServlet {
 					String sql = "insert into user values('" + name + "','"
 							+ password + "','" + sex + "','" + emailid
 							+ "',now())";
+					System.out.println(sql);
 					pst = (PreparedStatement) conn.prepareStatement(sql);
 					int a = pst.executeUpdate();
 					if (a > 0) {

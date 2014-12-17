@@ -5,8 +5,11 @@
 package com.action;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -27,6 +30,7 @@ public class UserLogin extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private static final String COOKIE_NAME = "JSESSIONID";
 
 	/**
 	 * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -64,43 +68,53 @@ public class UserLogin extends HttpServlet {
 
 			if ("admin".equals(username) && "admin".equals(password)) {
 
-				System.out
-						.println(" Admin Successfully Logged In. Session Id : "
-								+ session.getId());
+				String currentSessionId = request.getSession().getId()
+						.toUpperCase();
+				if (Constants.sesWeb.get(currentSessionId) == null) {
+					Constants.sesWeb.put(currentSessionId, "admin");
+					System.out.println(request.getParameterNames().toString());
+					Constants.dbreq.put(currentSessionId, request
+							.getParameterNames().toString());
+					
+					session.setAttribute("userid", username);
+					session.setAttribute("login", "true");
+					session.setAttribute("user", "true");
+					session.setAttribute("role", "admin");
 
-				session.setAttribute("userid", username);
-				session.setAttribute("login", "true");
-				session.setAttribute("user", "true");
-				session.setAttribute("role", "admin");
-
-				Constants.sesWeb.put(request.getSession().getId(), "admin");
-				System.out.println(request.getParameterNames().toString());
-				Constants.dbreq.put(request.getSession().getId(), request
-						.getParameterNames().toString());
-
-				response.sendRedirect("userHome.jsp");
+					response.sendRedirect("userHome.jsp");
+				} else {
+					response.sendRedirect("index.jsp?msg=Attempt of Session Hijacking for session id "
+							+ currentSessionId);
+				}
 
 			}
 			if (LoginProcessor.getUserDetails(username, password)) {
-
-				System.out.println(username
-						+ " Successfully Logged In. Session Id : "
-						+ session.getId());
-
+				
 				session.setAttribute("userid", username);
 				session.setAttribute("login", "true");
 				session.setAttribute("user", "true");
 
-				Constants.sesWeb.put(request.getSession().getId(), "user");
-				Constants.dbreq.put(request.getSession().getId(), request
-						.getParameterNames().toString());
+				String currentSessionId = request.getSession().getId()
+						.toUpperCase();
+				System.out.println("Map : Before : " + Constants.sesWeb);
+				System.out.println("Current Session Id : " + currentSessionId);
+				if (Constants.sesWeb.get(currentSessionId) == null) {
+					
+					Constants.sesWeb.put(currentSessionId, "user");
+					Constants.dbreq.put(currentSessionId, request
+							.getParameterNames().toString());
+					System.out.println("Map : First Request : " + Constants.sesWeb);
+					response.sendRedirect("userHome.jsp");
 
-				response.sendRedirect("userHome.jsp");
+				} else {
+					response.sendRedirect("index.jsp?msg=Attempt of Session Hijacking for session id "
+							+ currentSessionId);
+				}
 
 			}
-
+			Reporter.logAttack(request, "Session Hijack");
 			response.sendRedirect("index.jsp?msg=You are NOT Authorised User");
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

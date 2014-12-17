@@ -57,7 +57,10 @@
         <servlet-name>UserInfo</servlet-name>
         <servlet-class>com.action.UserInfo</servlet-class>
     </servlet>
-    
+    <servlet>
+        <servlet-name>FetchReportData</servlet-name>
+        <servlet-class>com.action.FetchReportData</servlet-class>
+    </servlet>
     
     <servlet-mapping>
         <servlet-name>UploadAction</servlet-name>
@@ -95,6 +98,11 @@
         <servlet-name>UserInfo</servlet-name>
         <url-pattern>/UserInfo</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FetchReportData</servlet-name>
+        <url-pattern>/FetchReportData</url-pattern>
+    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30
