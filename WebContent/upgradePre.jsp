@@ -45,9 +45,16 @@
 		<!-- star menu -->
 		<div id="menu">
 			<ul>
+				<li><a href="Logout">Log Out</a></li>
 				<li><a href="userHome.jsp">Home</a></li>
 				<li class="current_page_item"><a href="UpgradeRole">Trigger</a></li>
-				<li><a href="Logout">Log Out</a></li>
+				<%
+					if (request.getSession().getAttribute("role") == "admin") {
+				%>
+				<li><a href="handleReport.jsp">Reports</a></li>
+				<%
+					}
+				%>
 			</ul>
 		</div>
 		<!-- end menu -->
@@ -80,18 +87,18 @@
 										request.setAttribute("search",
 												"Query invalidated in Maping Model");
 									} else { */
-										String sql = "select * from user where  user='"
-												+ request.getParameter("search") + "'";
-										out.println("ss : " +sql);
-										pstm = con.prepareStatement(sql);
-										ResultSet rs = pstm.executeQuery();
-										String res = "";
-										while (rs.next()) {
-											res = res + "Name  :" + rs.getString("user")
-													+ "----- Email Id     :"
-													+ rs.getString("email") + "<br>";
-										}
-										request.setAttribute("search", res);
+									String sql = "select * from user where  user='"
+											+ request.getParameter("search") + "'";
+									out.println("ss : " + sql);
+									pstm = con.prepareStatement(sql);
+									ResultSet rs = pstm.executeQuery();
+									String res = "";
+									while (rs.next()) {
+										res = res + "Name  :" + rs.getString("user")
+												+ "----- Email Id     :"
+												+ rs.getString("email") + "<br>";
+									}
+									request.setAttribute("search", res);
 									//}
 								} catch (Exception e) {
 									e.printStackTrace();
