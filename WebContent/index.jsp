@@ -84,7 +84,7 @@ h3 {
                 <!-- end content -->
                 <!-- start sidebar -->
                 <div id="sidebar">
-                    <img src="images/padlock.jpg" alt="" width="112" height="112" class="left" />
+                    <img src="images/padlock.jpg" alt="" width="250" height="250" class="left" />
                 </div>
                 <!-- end sidebar -->
             </div>

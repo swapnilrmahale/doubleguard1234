@@ -96,7 +96,7 @@
 				<li class="current_page_item"><a href="userHome.jsp">Home</a></li>
 				<li><a href="upgradePre.jsp">Trigger</a></li>
 				<%
-					if (request.getSession().getAttribute("role") == "admin") {
+					if ("admin".equals(request.getSession().getAttribute("userid"))) {
 				%>
 				<li><a href="handleReport.jsp">Reports</a></li>
 				<%

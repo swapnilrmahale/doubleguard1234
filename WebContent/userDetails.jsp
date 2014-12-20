@@ -49,8 +49,16 @@
 		<!-- star menu -->
 		<div id="menu">
 			<ul>
-				<li class="current_page_item"><a href="userHome.jsp">Home</a></li>
 				<li><a href="Logout">Log Out</a></li>
+				<li class="current_page_item"><a href="userHome.jsp">Home</a></li>
+
+				<%
+					if ("admin".equals(request.getSession().getAttribute("userid"))) {
+				%>
+				<li><a href="handleReport.jsp">Reports</a></li>
+				<%
+					}
+				%>
 			</ul>
 		</div>
 		<!-- end menu -->
