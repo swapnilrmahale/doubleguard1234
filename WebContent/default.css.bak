@@ -186,7 +186,7 @@ img.left {
 #menu a {
 	display: block;
 	float: left;
-	/*background: url(images/img15.gif) no-repeat right 100%;*/
+	background: url(images/img15.gif) no-repeat right 100%;
 	padding: 18px 30px 0 30px;
 	text-decoration: none;
 	font-family: Arial, Helvetica, sans-serif;

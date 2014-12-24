@@ -33,7 +33,7 @@
         <div id="wrapper">
             <div id="header">
                 <div id="logo">
-                    <h1><a href="#"> DoubleGuard Detecting Intrusions in Multitier Web Applications</a></h1>		
+                    <h1><a href="#">IDS Using DOUBLEGUARD in Multitier Web Application</a></h1>		
                     <!--<p><span>DoubleGuard Detecting Intrusions in Multitier Web Applications</span></p> -->                
                 </div>	
                 <div id="search">

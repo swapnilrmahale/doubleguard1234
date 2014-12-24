@@ -28,10 +28,7 @@ h3 {
         <div id="wrapper">
             <div id="header">
                 <div class="style2" id="logo">
-                    <h1 align="justify"><a href="#"> Double Guard Detecting Intrusions in Multitier Web Applications</a></h1>		
-                    <div align="center">
-                      <!--<p><span>DoubleGuard Detecting Intrusions in Multitier Web Applications</span></p> -->                
-                        </div>
+                    <h1><a href="#">IDS Using DOUBLEGUARD in Multitier Web Application</a></h1>		
                 </div>	
                 <div id="search">
                     <form id="searchform" method="get" action="">

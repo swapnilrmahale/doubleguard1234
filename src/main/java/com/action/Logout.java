@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.util.Constants;
 /**
  *
  * @author swapper
@@ -33,6 +34,7 @@ public class Logout extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         response.getWriter();
        request.getSession().invalidate();
+       Constants.sesWeb.size();
        response.sendRedirect("index.jsp");
     }
 

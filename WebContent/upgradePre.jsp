@@ -27,8 +27,7 @@
 		<div id="header">
 			<div id="logo">
 				<h1>
-					<a href="#"> DoubleGuard Detecting Intrusions in Multitier Web
-						Applications</a>
+					<a href="#">IDS Using DOUBLEGUARD in Multitier Web Application</a>
 				</h1>
 				<!--<p><span>DoubleGuard Detecting Intrusions in Multitier Web Applications</span></p> -->
 			</div>
@@ -126,7 +125,7 @@
 							%>
 						</ul>
 
-						<br /> Sql Injection: <br /> <br />
+						<br />  <br />
 
 						<form method="post" action="upgradePre.jsp">
 							Search:

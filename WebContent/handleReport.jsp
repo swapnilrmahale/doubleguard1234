@@ -74,8 +74,7 @@
 		<div id="header">
 			<div id="logo">
 				<h1>
-					<a href="#">DoubleGuard Detecting Intrusions in Multitier Web
-						Applications</a>
+					<a href="#">IDS Using DOUBLEGUARD in Multitier Web Application</a>
 				</h1>
 			</div>
 
