@@ -84,8 +84,6 @@ function loadPieAttack() {
 	});
 }
 
-
-
 function loadGrid() {
 	console.log('loadGridData');
 	$("#list").jqGrid(
@@ -99,9 +97,13 @@ function loadGrid() {
 				colModel : [ {
 					name : 'id',
 					index : 'id',
-					hidden : true,
+					hidden : false,
+					formatter : 'integer',
 					width : 30,
-					sortable : true
+					sortable : true,
+					sorttype : function() {
+						return 1; // any constant value
+					}
 				}, {
 					name : 'attack',
 					index : 'attack',
@@ -126,18 +128,19 @@ function loadGrid() {
 					name : 'time',
 					align : 'center',
 					index : 'time',
-					width : 170
+					width : 170,
+					sortable : true
 				} ],
 				pager : '#pager',
-				rowNum : 20,
+				rowNum : 60,
 				rowList : [ 20, 40, 60 ],
-				sortname : 'attack',
-				sortorder : 'desc',
+				sortname : 'id',
+				sortorder : 'asc',
 				viewrecords : true,
 				gridview : true,
 				caption : 'Attack Report',
 				loadonce : true,
-				rownumbers: true
+				rownumbers : true
 			});
 	jQuery("#list").jqGrid('navGrid', '#pager', {
 		edit : false,
