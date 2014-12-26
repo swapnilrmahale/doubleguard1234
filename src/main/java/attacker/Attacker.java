@@ -44,7 +44,7 @@ public class Attacker extends javax.swing.JFrame {
         setForeground(new java.awt.Color(204, 51, 0));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jLabel1.setText("Attack Triger");
+        jLabel1.setText("Attack Client");
 
         jButton1.setText("Direct DB attack");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +73,7 @@ public class Attacker extends javax.swing.JFrame {
                 .addGap(135, 135, 135)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE))
+                    /*.addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)*/)
                 .addGap(132, 132, 132))
         );
         layout.setVerticalGroup(
@@ -82,9 +82,9 @@ public class Attacker extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
-                .addComponent(jButton1)
+                ./*addComponent(jButton1)
                 .addGap(44, 44, 44)
-                .addComponent(jButton2)
+                .*/addComponent(jButton2)
                 .addContainerGap(78, Short.MAX_VALUE))
         );
 

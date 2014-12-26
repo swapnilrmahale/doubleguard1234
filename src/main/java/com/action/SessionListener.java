@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSessionListener;
  *
  * @author swapper
  */
-public class SessionFilter implements HttpSessionListener {
+public class SessionListener implements HttpSessionListener {
 
     @Override
     public void sessionCreated(HttpSessionEvent se) {

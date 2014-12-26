@@ -16,7 +16,7 @@ import javax.servlet.http.*;
  *
  * @author swapper
  */
-public class RequestListener implements Filter {
+public class RequestFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

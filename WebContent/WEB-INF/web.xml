@@ -6,14 +6,14 @@
  
  	<!-- START : List All Listener Here -->   
     <listener>
-        <listener-class>com.action.SessionFilter</listener-class>
+        <listener-class>com.action.SessionListener</listener-class>
     </listener>
     <!-- END : List All Listener Here -->
     
     <!-- START : List All Filters Here -->
     <filter>
         <filter-name>frontFilter</filter-name>
-        <filter-class>com.action.RequestListener</filter-class>
+        <filter-class>com.action.RequestFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>frontFilter</filter-name>
@@ -61,6 +61,10 @@
         <servlet-name>FetchReportData</servlet-name>
         <servlet-class>com.action.FetchReportData</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FetchJQGridData</servlet-name>
+        <servlet-class>com.action.FetchJQGridData</servlet-class>
+    </servlet>
     
     <servlet-mapping>
         <servlet-name>UploadAction</servlet-name>
@@ -102,7 +106,10 @@
         <servlet-name>FetchReportData</servlet-name>
         <url-pattern>/FetchReportData</url-pattern>
     </servlet-mapping>
-    
+    <servlet-mapping>
+        <servlet-name>FetchJQGridData</servlet-name>
+        <url-pattern>/FetchJQGridData</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

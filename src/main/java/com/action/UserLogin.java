@@ -53,7 +53,6 @@ public class UserLogin extends HttpServlet {
 
 			String username = request.getParameter("name_");
 			String password = request.getParameter("password");
-
 			// Input for enabling Intrusion detector for SQL Injection
 			Boolean isEnableSQL = new Boolean(
 					request.getParameter("enableSQLGuard"));
@@ -83,6 +82,7 @@ public class UserLogin extends HttpServlet {
 
 					response.sendRedirect("userHome.jsp");
 				} else {
+					Reporter.logAttack(request, "Session Hijack");
 					response.sendRedirect("index.jsp?msg=Attempt of Session Hijacking for session id "
 							+ currentSessionId);
 				}
@@ -107,12 +107,11 @@ public class UserLogin extends HttpServlet {
 					response.sendRedirect("userHome.jsp");
 
 				} else {
+					Reporter.logAttack(request, "Session Hijack");
 					response.sendRedirect("index.jsp?msg=Attempt of Session Hijacking for session id "
 							+ currentSessionId);
 				}
-
 			}
-			Reporter.logAttack(request, "Session Hijack");
 			response.sendRedirect("index.jsp?msg=You are NOT Authorised User");
 
 		} catch (Exception e) {

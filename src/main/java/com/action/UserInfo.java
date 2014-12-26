@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.action.reporting.Reporter;
 import com.util.Constants;
 
 /**
@@ -36,6 +37,7 @@ public class UserInfo extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         System.out.println("User Info");
         if(Constants.trigger.containsKey(request.getSession().getId())){
+        	Reporter.logAttack(request, "Privilege Escalation");
             response.sendRedirect("upgradePre.jsp?msg=Request Invalidate At Mapping Model");
         }else{
             response.sendRedirect("userDetails.jsp");
