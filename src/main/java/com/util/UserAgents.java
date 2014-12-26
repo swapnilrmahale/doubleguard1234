@@ -15,7 +15,6 @@ import java.util.Map;
 public class UserAgents {
 
     public static boolean getBrowserInfo(String Information) {
-    	System.out.println(Information);
         Map<String, String> KeyPair = new HashMap<String, String>();
         KeyPair.put("HTTP_USER_AGENT", Information);
         String browsername = "";

@@ -30,17 +30,16 @@
 <script type="text/javascript" src="js/jquery-1.6.min.js"></script>
 <script type="text/javascript" src="js/jquery.reveal.js"></script>
 <!--<script language="javascript" type="text/javascript" src="jquery.min.js"></script>-->
-
 <script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
 <script type="text/javascript" src="js/jquery.jqplot.pierenderer.js"></script>
+
+
 <script type="text/javascript" src="js/piechart.js"></script>
+
 <script type="text/javascript" src="js/jquery.jqplot.barrenderer.js"></script>
 <script type="text/javascript"
 	src="js/jquery.jqplot.categoryAxisRenderer.js"></script>
 
-<%
-	System.out.println(session.getAttribute("role"));
-%>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$("#flip").click(function() {

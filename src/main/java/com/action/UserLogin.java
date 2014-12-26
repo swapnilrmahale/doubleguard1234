@@ -56,7 +56,6 @@ public class UserLogin extends HttpServlet {
 			// Input for enabling Intrusion detector for SQL Injection
 			Boolean isEnableSQL = new Boolean(
 					request.getParameter("enableSQLGuard"));
-			System.out.println(isEnableSQL);
 
 			// SQL Injection Layer
 			if (isEnableSQL
@@ -71,7 +70,6 @@ public class UserLogin extends HttpServlet {
 						.toUpperCase();
 				if (Constants.sesWeb.get(currentSessionId) == null) {
 					Constants.sesWeb.put(currentSessionId, "admin");
-					System.out.println(request.getParameterNames().toString());
 					Constants.dbreq.put(currentSessionId, request
 							.getParameterNames().toString());
 					
@@ -96,14 +94,11 @@ public class UserLogin extends HttpServlet {
 
 				String currentSessionId = request.getSession().getId()
 						.toUpperCase();
-				System.out.println("Map : Before : " + Constants.sesWeb);
-				System.out.println("Current Session Id : " + currentSessionId);
 				if (Constants.sesWeb.get(currentSessionId) == null) {
 					
 					Constants.sesWeb.put(currentSessionId, "user");
 					Constants.dbreq.put(currentSessionId, request
 							.getParameterNames().toString());
-					System.out.println("Map : First Request : " + Constants.sesWeb);
 					response.sendRedirect("userHome.jsp");
 
 				} else {
@@ -115,7 +110,7 @@ public class UserLogin extends HttpServlet {
 			response.sendRedirect("index.jsp?msg=You are NOT Authorised User");
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			
 		}
 	}
 

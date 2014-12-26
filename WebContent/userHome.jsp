@@ -78,7 +78,6 @@
 				<li><a href="upgradePre.jsp">Trigger</a></li>
 				<%
 					if ("admin".equals(request.getSession().getAttribute("userid"))) {
-							
 				%>
 				<li><a href="handleReport.jsp">Reports</a></li>
 				<li><a href="handleGrid.jsp">Grid</a></li>
@@ -135,7 +134,6 @@
 												+ "images" + File.separator;
 										File file = new File(putFile + rs.getString("filename"));
 										logo = rs.getString("filename");
-										System.out.println("Logo: " + logo);
 										if (file.exists()) {
 											file.delete();
 										} else {
@@ -143,10 +141,6 @@
 											while (index != -1) {
 												outImej.write(b, 0, index);
 												index = in.read(b, 0, len);
-												System.out.println("In else..");
-												System.out.println(index);
-												System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>"
-														+ outImej);
 											}
 											outImej.close();
 											i++;
@@ -172,7 +166,7 @@
 						</form>
 						<h2>Search Image Here</h2>
 						<form action="searchImage.jsp" method="post">
-							Search:&nbsp;&nbsp
+							Search:&nbsp;&nbsp;
 							<input type="text" id="tag" name="tag" />
 							<br />
 							<br />
@@ -221,18 +215,14 @@
 						<a href="#contact">Click Here to Contact Us:</a>
 					</div>
 					<div id="panel">
-						JPInfotech Research and Development,<br />
+						Sagar Salunke<br />
 					</div>
 				</a>
 			</div>
-			<!-- end sidebar -->
 		</div>
-		<!-- end page -->
-		<!-- start footer -->
 		<div id="footer">
 			<p class="legal">&nbsp;</p>
 		</div>
 	</div>
-	<!-- end footer -->
 </body>
 </html>

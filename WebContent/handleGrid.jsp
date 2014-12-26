@@ -38,9 +38,6 @@
 <script src="js/piechart.js"></script>
 
 
-<%
-	System.out.println(session.getAttribute("role"));
-%>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$("#flip").click(function() {

@@ -56,7 +56,6 @@ public class NewProfile extends HttpServlet {
 			// Input for enabling Intrusion detector for XSS Attack
 			Boolean isEnableXSS = new Boolean(
 					request.getParameter("enableXSSGuard"));
-			System.out.println(isEnableXSS);
 
 			// Check If there any Attempt of XSS Attack
 			if (isEnableXSS
@@ -73,7 +72,6 @@ public class NewProfile extends HttpServlet {
 					String sql = "insert into user values('" + name + "','"
 							+ password + "','" + sex + "','" + emailid
 							+ "',now())";
-					System.out.println(sql);
 					pst = (PreparedStatement) conn.prepareStatement(sql);
 					int a = pst.executeUpdate();
 					if (a > 0) {

@@ -63,8 +63,8 @@ public class HijackFutureSession {
 
 			
 			List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
-			urlParameters.add(new BasicNameValuePair("name_", "1"));
-			urlParameters.add(new BasicNameValuePair("password", "1"));
+			urlParameters.add(new BasicNameValuePair("name_", "admin"));
+			urlParameters.add(new BasicNameValuePair("password", "admin"));
 	 
 			request.setEntity(new UrlEncodedFormEntity(urlParameters));
 			

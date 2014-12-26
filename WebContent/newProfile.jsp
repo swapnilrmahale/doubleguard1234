@@ -6,29 +6,6 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" media="screen" />
-<style type="text/css">
-<!--
-body, td, th {
-	font-family: Times New Roman, Times, serif;
-}
-
-h1 {
-	color: #FFFFFF;
-}
-
-h2 {
-	color: #FFFFFF;
-}
-
-h3 {
-	color: #FFFFFF;
-}
-
-.style2 {
-	font-size: 16pt
-}
--->
-</style>
 </head>
 
 <body>
@@ -69,7 +46,7 @@ h3 {
 							}
 						%>
 						<h2>New User</h2>
-						<form name="" action="NewProfile" method="post">
+						<form action="NewProfile" method="post">
 							<table>
 								<tr style="height: 40px;">
 									<td>User Name</td>

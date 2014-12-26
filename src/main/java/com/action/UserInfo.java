@@ -35,7 +35,6 @@ public class UserInfo extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        System.out.println("User Info");
         if(Constants.trigger.containsKey(request.getSession().getId())){
         	Reporter.logAttack(request, "Privilege Escalation");
             response.sendRedirect("upgradePre.jsp?msg=Request Invalidate At Mapping Model");

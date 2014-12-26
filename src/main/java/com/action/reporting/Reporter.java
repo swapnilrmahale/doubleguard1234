@@ -11,25 +11,24 @@ import com.util.DbConnector;
 public class Reporter {
 
 	public static void logAttack(HttpServletRequest request, String type) {
-		System.out.println("Start Reporting...");
+		// System.out.println("Start Reporting...");
 		String ua = request.getHeader("User-Agent");
 		String ra = request.getRemoteAddr();
 		String rh = request.getRemoteHost();
 		int rp = request.getRemotePort();
 		String ru = request.getRemoteUser();
-		System.out.println("UA : " + ua + "\nRA : " + ra + "\nRH : " + rh
-				+ "\nRP : " + rp + "\nRU : " + ru);
+		// System.out.println("UA : " + ua + "\nRA : " + ra + "\nRH : " + rh + "\nRP : " + rp + "\nRU : " + ru);
 
 		// if client behind firewall
 		String ipAddress = request.getHeader("X-FORWARDED-FOR");
 		if (ipAddress == null) {
 			ipAddress = request.getRemoteAddr();
 		}
-		System.out.println("Client IP Address : " + ipAddress);
+		// System.out.println("Client IP Address : " + ipAddress);
 		String browserDetails = request.getHeader("User-Agent");
 		String userAgent = browserDetails;
 		String user = userAgent.toLowerCase();
-		System.out.println(user);
+		// System.out.println(user);
 		String os = "";
 		// =================OS=======================
 		if (userAgent.toLowerCase().indexOf("windows") >= 0) {
@@ -89,8 +88,8 @@ public class Reporter {
 		} else {
 			browser = "UnKnown, More-Info: " + userAgent;
 		}
-		System.out.println("OS : " + os);
-		System.out.println("Browser : " + browser);
+		// System.out.println("OS : " + os);
+		// System.out.println("Browser : " + browser);
 
 		insertAttackRecord(type, ipAddress, browser, os, new Date());
 	}
@@ -112,7 +111,7 @@ public class Reporter {
 					+ os
 					+ "', now() )";
 			pst = (PreparedStatement) conn.prepareStatement(sql);
-			System.out.println("Added Record ? : " + pst.execute());
+			pst.execute();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

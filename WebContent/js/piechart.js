@@ -84,40 +84,7 @@ function loadPieAttack() {
 	});
 }
 
-function loadBar() {
-	var plot4 = $.jqplot('bar', [
-			[ [ 2, '127.0.0.1' ], [ 6, '192.168.101.1' ],
-					[ 7, '192.168.101.5' ], [ 10, 'localhost' ] ],
-			[ [ 7, '127.0.0.1' ], [ 5, '192.168.101.1' ],
-					[ 3, '192.168.101.5' ], [ 2, 'localhost' ] ],
-			[ [ 14, '127.0.0.1' ], [ 9, '192.168.101.1' ],
-					[ 9, '192.168.101.5' ], [ 8, 'localhost' ] ] ], {
-		stackSeries : true,
-		captureRightClick : true,
-		seriesDefaults : {
-			renderer : $.jqplot.BarRenderer,
-			shadowAngle : 135,
-			rendererOptions : {
-				barDirection : 'horizontal',
-				highlightMouseDown : true
-			},
-			pointLabels : {
-				show : true,
-				formatString : '%d'
-			}
-		},
-		legend : {
-			show : true,
-			location : 'e',
-			placement : 'outside'
-		},
-		axes : {
-			yaxis : {
-				renderer : $.jqplot.CategoryAxisRenderer
-			}
-		}
-	});
-}
+
 
 function loadGrid() {
 	console.log('loadGridData');
@@ -162,14 +129,15 @@ function loadGrid() {
 					width : 170
 				} ],
 				pager : '#pager',
-				rowNum : 10,
-				rowList : [ 10, 20, 30 ],
+				rowNum : 20,
+				rowList : [ 20, 40, 60 ],
 				sortname : 'attack',
 				sortorder : 'desc',
 				viewrecords : true,
 				gridview : true,
 				caption : 'Attack Report',
-				loadonce : true
+				loadonce : true,
+				rownumbers: true
 			});
 	jQuery("#list").jqGrid('navGrid', '#pager', {
 		edit : false,
