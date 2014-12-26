@@ -1,3 +1,9 @@
+
+<%
+	if (request.getSession().getAttribute("login") == null) {
+		response.sendRedirect("index.jsp?msg=Please Login");
+	}
+%>
 <%@page import="java.io.File"%>
 <%@page import="java.io.InputStream"%>
 <%@page import="java.io.FileOutputStream"%>
@@ -11,20 +17,54 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Double Guard</title>
+<title>DoubleGuard : Grid</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default1.css" rel="stylesheet" type="text/css"
 	media="screen" />
-</head>
+<link href="css/reveal.css" rel="stylesheet" type="text/css"
+	media="screen" />
+
+<link rel="stylesheet" href="css/jquery-ui.css"/>
+<link rel="stylesheet" href="css/ui.jqgrid.css"/>
+
+<script src="js/jquery-1.6.min.js" type="text/javascript"></script>
+<script src="js/jquery.reveal.js" type="text/javascript"></script>
+
+<script src="js/i18n/grid.locale-en.js" type="text/javascript"></script>
+<script src="js/jquery.jqGrid.src.js" type="text/javascript"></script>
+<script src="js/jquery-ui.js" type="text/javascript"></script>
+
+<script src="js/piechart.js"></script>
+
+
 <%
-	if (request.getSession().getAttribute("login") == null) {
-		response.sendRedirect("index.jsp?msg=Please Login");
-	}
-	if (request.getSession().getAttribute("role") != "admin") {
-		response.sendRedirect("index.jsp?msg=Invalid Request");
-	}
+	System.out.println(session.getAttribute("role"));
 %>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#flip").click(function() {
+			$("#panel").slideToggle("slow");
+		});
+
+		loadGrid();
+	});
+</script>
+
+<style type="text/css">
+#panel, #flip {
+	padding: 5px;
+	text-align: center;
+	background: #000000 url(images/img12.jpg) repeat top left;
+	color: #ffffff;
+}
+
+#panel {
+	padding: 10px;
+	display: none;
+}
+</style>
+</head>
 <body>
 	<!-- start header -->
 	<div id="wrapper">
@@ -33,8 +73,8 @@
 				<h1>
 					<a href="#">IDS Using DOUBLEGUARD in Multitier Web Application</a>
 				</h1>
-				<!--<p><span>DoubleGuard Detecting Intrusions in Multitier Web Applications</span></p> -->
 			</div>
+
 			<div id="search">
 				<form id="searchform" method="get" action="">
 					<fieldset>
@@ -50,7 +90,7 @@
 			<ul>
 				<li><a href="Logout">Log Out</a></li>
 				<li class="current_page_item"><a href="userHome.jsp">Home</a></li>
-
+				<li><a href="upgradePre.jsp">Trigger</a></li>
 				<%
 					if ("admin".equals(request.getSession().getAttribute("userid"))) {
 				%>
@@ -64,59 +104,20 @@
 		<!-- end menu -->
 		<!-- start page -->
 		<div id="page">
+
+			<table id="list">
+				<tr>
+					<td />
+				</tr>
+			</table>
+			<div id="pager"></div>
+
 			<!-- start ads -->
+
 			<!-- end ads -->
 			<!-- start content -->
-			<div id="content">
-				<div class="post">
-					<div class="title">
-						<h2>
-							<a href="#">User Login <img src="icons/user_go.png"
-								height="20" width="20"></img></a>
-						</h2>
-					</div>
-					<div class="entry">
-						<table width="100%">
-							<tr>
-								<td>Name</td>
-								<td>Gender</td>
-								<td>E-Mail</td>
-							</tr>
-							<%
-								try {
-
-									Connection con = DbConnector.getConnection();
-									PreparedStatement pstm = null;
-
-									String sql = "select * from user";
-
-									pstm = con.prepareStatement(sql);
-									ResultSet rs = pstm.executeQuery();
-									while (rs.next()) {
-							%>
-							<tr>
-								<td><%=rs.getString("user")%></td>
-								<td><%=rs.getString("gender")%></td>
-								<td><%=rs.getString("email")%></td>
-							</tr>
-							<%
-								}
-								} catch (Exception e) {
-									e.printStackTrace();
-
-								}
-							%>
-						</table>
-					</div>
-
-				</div>
-			</div>
 			<!-- end content -->
 			<!-- start sidebar -->
-			<div id="sidebar">
-				<img src="images/padlock.jpg" alt="" width="250" height="250"
-					class="left" />
-			</div>
 			<!-- end sidebar -->
 		</div>
 		<!-- end page -->

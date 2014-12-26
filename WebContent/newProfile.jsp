@@ -32,7 +32,6 @@ h3 {
 </head>
 
 <body>
-	<!-- start header -->
 	<div id="wrapper">
 		<div id="header">
 			<div id="logo">
@@ -49,25 +48,18 @@ h3 {
 				</form>
 			</div>
 		</div>
-		<!-- end header -->
-		<!-- star menu -->
 		<div id="menu">
 			<ul>
 				<li><a href="index.jsp">Login</a></li>
 				<li class="current_page_item"><a href="#">New User</a></li>
 			</ul>
 		</div>
-		<!-- end menu -->
-		<!-- start page -->
 		<div id="page">
-			<!-- start ads -->
-			<!-- end ads -->
-			<!-- start content -->
 			<div id="content">
 				<div class="post">
 					<div class="title">
 						<h2>
-							<a href="#">Registeration</a>
+							<a href="#">Registration</a>
 						</h2>
 					</div>
 					<div class="entry">
@@ -121,16 +113,11 @@ h3 {
 					<p class="links"></p>
 				</div>
 			</div>
-			<!-- end content -->
-			<!-- start sidebar -->
-			<!-- end sidebar -->
-		</div>
-		<!-- end page -->
-		<!-- start footer -->
-		<div id="footer">
-			<p class="legal">&nbsp;</p>
+			<div id="sidebar">
+				<img src="images/padlock.jpg" alt="" width="250" height="250"
+					class="left" />
+			</div>
 		</div>
 	</div>
-	<!-- end footer -->
 </body>
 </html>

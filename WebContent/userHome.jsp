@@ -81,6 +81,7 @@
 							
 				%>
 				<li><a href="handleReport.jsp">Reports</a></li>
+				<li><a href="handleGrid.jsp">Grid</a></li>
 				<%
 					}
 				%>
